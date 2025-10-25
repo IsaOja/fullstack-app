@@ -1,6 +1,6 @@
 # fullstack app
 
-Render URL:
+Render URL: https://fullstack-app-lggj.onrender.com
 
 Content Delivelry Network (CDN)
 

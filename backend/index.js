@@ -1,4 +1,5 @@
-const express = require("express");
+const express = require("express"),
+  path = require("path");
 const { getArtists } = require("./db");
 
 const app = express(),
@@ -13,6 +14,8 @@ app.get("/api/artists", async (_req, res) => {
     res.status(500).json({ error: "Failed to load artists" });
   }
 });
+
+app.use(express.static(path.join(path.resolve(), "dist")));
 
 app.listen(port, () => {
   console.log(`Redo på http://localhost:${port}/`);
